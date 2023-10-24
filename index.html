@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Rania Ben Salah</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="eportfolio/public_html/assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Meyawo main styles -->
+    <link rel="stylesheet" href="eportfolio/public_html/assets/css/style.css">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="#">Rania Ben Salah</a>
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="#home">Acceuil</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#about">À propos de moi</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#portfolio">Expériences professionnelles</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#contact">Contact</a>
+                </li>
+
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>
+    </nav><!-- End of Page Navbar -->
+
+    <!-- page header -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up">Bonjour!</span>
+                <span class="down">Je suis Rania</span>
+            </h1>
+            <div class="Typewriter" data-testid="typewriter-wrapper">
+                <span class="Typewriter__wrapper">
+                    <span id="typewriter-text" class="header-subtitle">comptable professionnel</span>
+                    <span class="Typewriter__cursor">|</span>
+                </span>
+            </div>
+        </div>
+        <script>
+            const typewriterText = document.getElementById('typewriter-text');
+            const words = ['comptable professionnel'];
+
+            let wordIndex = 0;
+            let letterIndex = 0;
+            let isDeleting = false;
+
+            function type() {
+                const currentWord = words[wordIndex];
+                if (isDeleting) {
+                    typewriterText.textContent = currentWord.substring(0, letterIndex - 1);
+                    letterIndex--;
+                } else {
+                    typewriterText.textContent = currentWord.substring(0, letterIndex + 1);
+                    letterIndex++;
+                }
+
+                if (!isDeleting && letterIndex === currentWord.length) {
+                    isDeleting = true;
+                    setTimeout(type, 1500); // Pause at end of word
+                } else if (isDeleting && letterIndex === 0) {
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length;
+                    setTimeout(type, 500); // Delay before typing next word
+                } else {
+                    setTimeout(type, isDeleting ? 50 : 100); // Typing speed
+                }
+            }
+
+            window.addEventListener('DOMContentLoaded', type);
+        </script>
+    </header><!-- end of page header -->
+
+    <!-- about section -->
+    <section class="section pt-0" id="about">
+        <!-- container -->
+        <div class="container text-center">
+            <!-- about wrapper -->
+            <div class="about">
+                <div class="about-img-holder">
+                    <img src="eportfolio/public_html/assets/imgs/femme.jpg" class="about-img">
+                </div>
+                <div class="about-caption">
+                    <p class="section-subtitle">Qui suis-je ?</p>
+                    <h2 class="section-title mb-3">À propos de moi</h2>
+                    <p>
+                        Je suis actuellement étudiante en terminale de master professionnel en comptabilité, et j'ai axé
+                        mon parcours académique sur l'acquisition d'une expertise solide dans le domaine de la
+                        comptabilité et de l'audit. Mon expérience académique m'a permis de réaliser des missions
+                        d'audit avec rigueur et précision, me conférant une compréhension approfondie des normes et des
+                        processus qui sous-tendent la comptabilité d'entreprise. De plus, j'ai également acquis une
+                        expérience précieuse en tant qu'assistante administrative, ce qui m'a permis de développer des
+                        compétences organisationnelles et administratives essentielles.
+
+                        Je me distingue par ma brillance intellectuelle et ma créativité, des qualités qui se reflètent
+                        dans ma capacité à résoudre des problèmes complexes et à apporter une perspective innovante à
+                        mon travail. Ma maîtrise avancée du logiciel Excel me permet d'analyser et de présenter
+                        efficacement des données financières, tandis que ma compétence dans les langages HTML et CSS
+                        m'autorise à concevoir et à gérer du contenu en ligne de manière professionnelle.
+
+                         
+                    </p>
+                    <a href="eportfolio/public_html/CV_2023083011195525.pdf" download>
+                        <button class="btn-rounded btn btn-outline-primary mt-4">Télécharger CV</button>
+                    </a>
+                </div>
+            </div><!-- end of about wrapper -->
+        </div><!-- end of container -->
+    </section> <!-- end of about section -->
+
+    <!-- service section -->
+    <section class="section" id="service">
+        <div class="container text-center">
+
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="eportfolio/public_html/assets/imgs/pencil-case.svg" class="icon">
+                            <h6 class="title">Current Stack</h6>
+                            <p class="subtitle">
+                                Excel
+                                <br />
+                                logeciel sage-100 comptable
+                                <br />
+                                html / css 
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="eportfolio/public_html/assets/imgs/pencil-case.svg" class="icon">
+                            <h6 class="title">Current Stack</h6>
+                            <p class="subtitle"  style="left : 90px; margin-top: -300px;">
+                                Power BI
+                                <br />
+                                ERP
+                                
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                </div>
+            </div><!-- end of row -->
+        </div>
+    </section><!-- end of service section -->
+
+    <!-- portfolio section -->
+    <section class="section" id="portfolio">
+        <div class="container text-center">
+            <p class="section-subtitle"></p>
+
+            <h6 class="section-title mb-6">Expériences professionnelles</h6>
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="https://ebio-frontend.onrender.com/" class="portfolio-card">
+                        <img src="eportfolio/public_html/assets/imgs/kimiburg.png" class="portfolio-card-img">
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Assistante administrative</h5>
+                                    <p class="font-weight-normal">
+                                        Gestion des documents
+                                        <br/>
+                                        Rédaction de documents
+                                        <br/>
+                                        Traitement de l'information
+                                        <br/>
+                                        Gestion de l'agenda
+                                    </p>
+                            </span>
+                        </span>
+                    </a>
+                    
+                </div>
+                <div class="col-md-4">
+                    <div class="portfolio-card">
+                        <a href="https://github.com/dorramakhloufi/Kadem">
+                            <img class="portfolio-card-img" src="eportfolio/public_html/assets/imgs/logo.png"
+                                class="img-responsive rounded" alt="" style="width: 500px; height: 200px;">
+                            <span class="portfolio-card-overlay">
+                                <span class="portfolio-card-caption">
+                                    <h4>Centre National des Technologies en Education</h4>
+                                    <p class="font-weight-normal">
+                                        <br/>Évaluation des processus internes
+                                        <br/>Contrôle de la conformité
+                                        <br/>Assurance qualité
+                                        <br/>Rapports et communication .</p>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="https://github.com/dorramakhloufi/SmartEsprit" class="portfolio-card">
+                        <img class="portfolio-card-img" width="100px"
+                            src="eportfolio/public_html/assets/imgs/OACA.jpg" class="img-responsive rounded">
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Office de l'Aviation Civile et des Aeroport</h5>
+                                    <p class="font-weight-normal">
+                                        <br/>Évaluation des processus internes
+                                        <br/>Contrôle de la conformité
+                                        <br/>Assurance qualité
+                                        <br/>Rapports et communication .</p>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+                
+                <div class="col-md-4">
+                    <a href="https://github.com/dorramakhloufi/SmartEsprit" class="portfolio-card">
+                        <img class="portfolio-card-img" width="100px"
+                            src="eportfolio/public_html/assets/imgs/STB.png" class="img-responsive rounded">
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Sociéte Tunisienne de Banque</h5>
+                                    <p class="font-weight-normal">
+                                        <br/>Collecte de la documentation
+                                        <br/>Examen des reçus et des justificatifs
+                                        <br/>Vérification des enregistrements
+                                        <br/>Vérification des politiques de contrôle interne
+                                        <br/>Réconciliation des résultats .</p>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+            </div><!-- end of row -->
+        </div><!-- end of container -->
+    </section> <!-- end of portfolio section -->
+
+    
+    <!-- <section class="section" id="pricing">
+        <div class="container text-center">
+            <h6 class="section-title mb-6">Technologies</h6>
+            
+
+            </head>
+
+            <body>
+                <div class="slider">
+                    <div class="slide-track">
+                        <div class="slide">
+                            <img src='eportfolio/public_html/assets/imgs/node.jpg'>
+                        </div>
+                        <div class="slide">
+                            <img src='eportfolio/public_html/assets/imgs/mongodb.jpg'>
+                        </div>
+                        <div class="slide">
+                            <img src='eportfolio/public_html/assets/imgs/react.jpg'>
+                        </div>
+                        <div class="slide">
+                            <img src='eportfolio/public_html/assets/imgs/angular.jpg'>
+                        </div>
+                        <div class="slide">
+                            <img src='eportfolio/public_html/assets/imgs/springBoot.jpg'>
+                        </div>
+                        <div class="slide">
+                            <img src='eportfolio/public_html/assets/imgs/java.jpg'>
+                        </div>
+                        <div class="slide">
+                            <img src='eportfolio/public_html/assets/imgs/flask.jpg'>
+                        </div>
+                        <div class="slide">
+                            <img src='eportfolio/public_html/assets/imgs/folio-1.jpg'>
+                        </div>
+                        <div class="slide">
+                            <img src='eportfolio/public_html/assets/imgs/folio-1.jpg'>
+                        </div>
+
+                        <div class="slide">
+                            <img src='eportfolio/public_html/assets/imgs/node.jpg'>
+                        </div>
+                        <div class="slide">
+                            <img src='eportfolio/public_html/assets/imgs/mongodb.jpg'>
+                        </div>
+                        <div class="slide">
+                            <img src='eportfolio/public_html/assets/imgs/react.jpg'>
+                        </div>
+                        <div class="slide">
+                            <img src='eportfolio/public_html/assets/imgs/angular.jpg'>
+                        </div>
+                        <div class="slide">
+                            <img src='eportfolio/public_html/assets/imgs/springBoot.jpg'>
+                        </div>
+                        <div class="slide">
+                            <img src='eportfolio/public_html/assets/imgs/java.jpg'>
+                        </div>
+                        <div class="slide">
+                            <img src='eportfolio/public_html/assets/imgs/flask.jpg'>
+                        </div>
+                        <div class="slide">
+                            <img src='eportfolio/public_html/assets/imgs/folio-1.jpg'>
+                        </div>
+                        <div class="slide">
+                            <img src='eportfolio/public_html/assets/imgs/folio-1.jpg'>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+        </div> 
+    </section> -->
+
+    <section class="section-sm bg-primary"
+        style="background-image: url('./assets/imgs/section.jpg'); background-size: cover; padding: 200px 0;">
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col">
+                    <!-- Content if needed -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- testimonial section -->
+    <!-- end of testimonial section -->
+
+    <!-- blog section -->
+    <!-- end of blog section -->
+
+
+    <section class="section" id="contact">
+        <div class="container text-center">
+            <p class="section-subtitle">Comment pouvons-nous communiquer ?</p>
+            <h6 class="section-title mb-5">Contactez-moi</h6>
+            <br>
+            <br>
+            <!-- contact icons -->
+            <div class="contact-icons">
+                <div class="iconn">
+                    <a href="https://wa.me/your-phonenumber" target="_blank" class="link">
+                        <i class="ti-mobile"></i>
+                    </a>
+                    <br>
+                    <p>WhatsApp: <a href="https://wa.me/your-phonenumber" target="_blank">+21695021762</a></p>
+                </div>
+                <div class="iconn">
+                    <a href="mailto:your-email@example.com" class="link">
+                        <i class="ti-email"></i>
+                    </a>
+                    <br>
+                    <p>Email: <a href="mailto:your-email@example.com">bensalah707@gmail.com</a></p>
+                </div>
+                <div class="iconn">
+                    <a href="https://www.linkedin.com/in/rania-bensalah-bb520a198/" target="_blank" class="link">
+                        <i class="ti-linkedin"></i>
+                    </a>
+                    <br>
+                    <p>Linkedin: <a href="https://www.linkedin.com/in/rania-bensalah-bb520a198/" target="_blank">Rania Ben Salah</a></p>
+                </div>
+            </div><!-- end of contact icons -->
+        </div><!-- end of container -->
+    </section><!-- end of contact section -->
+
+    <!-- footer -->
+    <div class="container">
+        <footer class="footer">
+            <p class="mb-0">Copyright
+                <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com">. All
+                    Rights Reserved</a>
+            </p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <a href="mailto:bensalah707@gmail.com" class="link"><i class="ti-email"></i></a>
+                <a href="https://www.linkedin.com/in/rania-bensalah-bb520a198/" class="link"><i class="ti-linkedin"></i></a>
+                <a href="https://wa.me/your-phonenumber" class="link"><i class="ti-mobile"></i></a>
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+
+    <!-- core  -->
+    <script src="eportfolio/public_html/assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="eportfolio/public_html/assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="eportfolio/public_html/assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Meyawo js -->
+    <script src="eportfolio/public_html/assets/js/meyawo.js"></script>
+
+</body>
+
+</html>
